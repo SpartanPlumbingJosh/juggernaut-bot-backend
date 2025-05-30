@@ -109,4 +109,6 @@ async def publish_event(event: EventModel):
 
 # Main entry point
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    # Get port from environment variable or use 8080 as default
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
