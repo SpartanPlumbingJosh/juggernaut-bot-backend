@@ -1,4 +1,4 @@
-# Core dependencies - latest versions
+# Core dependencies
 fastapi>=0.104.1
 uvicorn>=0.23.2
 pydantic>=2.4.2
@@ -15,8 +15,9 @@ bcrypt>=4.0.1
 redis>=5.0.1
 celery>=5.3.4
 playwright>=1.39.0
-python-3.11.0
 
-# Packages with specific compatibility requirements
-pytesseract>=0.3.10  # Correct package name, regardless of version
-Pillow>=9.5.0,<10.0.0  # Stable version range known to work in cloud environments
+# Use pytesseract instead of tesseract
+pytesseract>=0.3.10
+
+# Use a specific Pillow version that's known to work with Python 3.13
+Pillow==9.0.1
